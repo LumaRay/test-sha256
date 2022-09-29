@@ -20,7 +20,7 @@ You can find links to the algorithms' web pages in the first comments of the cor
 
 ## Test Results
 
-| Language | author  | time, ms  |
+| Language | Author  | Time, ms  |
 |:-------:|:---------:|:---------:|
 |    cpp | glitch   | 317837 |
 |    cpp | picosha2   | 149811 |
