@@ -1,0 +1,58 @@
+[package]
+name = "sha256fast"
+version = "0.0.3"
+authors = ["Deni Sukhonina <d.sukhonina@gmail.com>"]
+edition = "2018"
+license = "Apache-2.0"
+description = "Bindings for SHA256 library"
+repository = "https://github.com/ActualIlluminati/sha256fast"
+readme = "README.md"
+keywords = ["sha256", "simd", "ssse3", "avx", "avx2"]
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+    "README.md",
+    "rustfmt.toml",
+    "src/*.cxx",
+    "src/*.hxx",
+    "src/*.S",
+    # "blst/build/**",
+    # "blst/src/asm/*.pl",
+    # "blst/bindings/blst.h",
+    # "blst/bindings/blst_aux.h",
+]
+
+[features]
+# Binary can be executed on systems similar to the host.
+default = []
+# Binary can be executed on all systems.
+portable = []
+# Expose compress function
+compress = []
+
+[build-dependencies]
+cc = "1.0"
+# glob = "0.3"
+
+[dependencies]
+digest = "~0.9"
+opaque-debug = "~0.3"
+# threadpool = "^1.8.1"
+# zeroize = { version = "^1.1", features = ["zeroize_derive"] }
+
+# [target.'cfg(any(target_arch = "x86", target_arch = "x86_64"))'.dependencies]
+# cpuid-bool = "0.1"
+
+[dev-dependencies]
+digest = { version = "0.9", features = ["dev"] }
+criterion = "0.3"
+
+[[bench]]
+name = "benches"
+harness = false
+
+[profile.release]
+opt-level = 3
+
+[badges]
+maintenance = { status = "actively-developed" }

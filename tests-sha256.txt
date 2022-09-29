@@ -1,0 +1,41 @@
+бенчмарки:
+
+sha256 - 1 core -O3 -mavx2 -g -funroll-all-loops
+
+#define DATA_SIZE	(1024 * 1024)
+#define LOOPS_COUNT	(16 * 1024)
+
+c-openssl 36693
+
+cpp-stbrumme 72729
+
+cpp-glitch 317837
+
+cpp-picosha2 149811
+
+cpp-actualilluminati 42631
+
+c-cgminer 70336
+
+c-kste 124983 (8x=12617)
+
+c-defltstack 71239
+
+c-amosnier 94601
+
+go-native 42559
+
+go-minio 42920
+
+rust-jedisct1 68292
+
+rust-rustcrypto 80306
+
+rust-openssl 37666
+
+rust-alexv 88485
+
+rust-ring 42541
+
+
+

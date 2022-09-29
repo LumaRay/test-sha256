@@ -1,0 +1,5 @@
+comment_width = 90
+fn_single_line = true
+fn_call_width = 90
+max_width = 90
+struct_field_align_threshold = 20
