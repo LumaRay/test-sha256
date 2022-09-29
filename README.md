@@ -38,3 +38,5 @@ You can find links to the algorithms' web pages in the first comments of the cor
 |    rust | ring   |  42541 |
 |    rust | openssl   |  37666 |
 |    c | openssl   |  36693 |
+
+There is also some interesting benchmark chart: https://bench.cr.yp.to/results-hash.html
