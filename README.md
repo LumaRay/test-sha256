@@ -1,4 +1,4 @@
-# Testing SHA256 performance with different languages
+# Testing SHA256 vs Blake3 performance with different languages
 
 The testing has been performed on Windows 7x64 host with Ubuntu 18.04 x64 virtual machine with 16Gb RAM and 4 cores, Intel-VT enabled.
 
@@ -10,7 +10,7 @@ AVX2 is used whenever possible.
 
 Full release optimizations.
 
-SHA256 is computed over 1MB byte array with 16 * 1024 cycles.
+SHA256/Blake3 are computed over 1MB byte array with 16 * 1024 cycles.
 
 All tests use 1 core.
 
@@ -18,7 +18,7 @@ Test results are given in milliseconds of total execution time, in descending or
 
 You can find links to the algorithms' web pages in the first comments of the corresponding main source files.
 
-## Test Results
+## Test Results with SHA-256
 
 | Language | Author  | Time, ms  |
 |:-------:|:---------:|:---------:|
@@ -38,5 +38,11 @@ You can find links to the algorithms' web pages in the first comments of the cor
 |    rust | ring   |  42541 |
 |    rust | openssl   |  37666 |
 |    c | openssl   |  36693 |
+
+## Test Results with Blake3
+
+| Language | Author  | Time, ms  |
+|:-------:|:-------------:|:---------:|
+|    rust |  BLAKE3-team   | 4692 |
 
 There is also some interesting benchmark chart: https://bench.cr.yp.to/results-hash.html
